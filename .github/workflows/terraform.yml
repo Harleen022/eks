@@ -3,17 +3,16 @@ name: 'Terraform CI/CD'
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 permissions:
   contents: read
   pull-requests: write
 
 env:
-  TF_WORKSPACE: 'dev'
   AWS_REGION: 'us-east-1'  # Updated region
 
 jobs:
@@ -92,5 +91,5 @@ jobs:
       run: exit 1
 
     - name: Terraform Apply
-      if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve 

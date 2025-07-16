@@ -4,5 +4,5 @@ provider "aws" {
 
 module "terraform_state_bucket" {
   source = "../../modules/s3"
-  bucket_name = "githubackendcicd-s3"
+  bucket_name = "harleen-s3-5432"
 } 

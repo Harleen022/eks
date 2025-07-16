@@ -13,7 +13,7 @@ permissions:
   pull-requests: write
 
 env:
-  AWS_REGION: 'us-east-1'  # Updated region
+  AWS_REGION: 'us-east-1'  # N. Virginia region
 
 jobs:
   terraform:
